@@ -1,10 +1,15 @@
 "use strict";
 
-var gulp                = require('gulp');
+var gulp     = require('gulp');
+var Bluebird = require('bluebird');
 
-gulp.task('hello', ()=>
+gulp.task('promiseIt', (done)=>
 {
-	console.log("Hey, what's up!");
+	Promise.resolve(1).then(function()
+	{
+		console.log("Bluebird Promise done.");
+		done();
+	});
 });
 
-gulp.task('default', ['hello']);
+gulp.task('default', ['promiseIt']);

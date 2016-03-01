@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/JesterXL/simple-gulp#readme",
   "devDependencies": {
+    "bluebird": "^3.3.3",
     "gulp": "^3.9.1"
   }
 }
